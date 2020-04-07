@@ -5,15 +5,15 @@ function Display() {
   const [counter, setCounter] = useState(0);
   const incrementCounter = (increment) => {
     if (increment !== 0) {
-      setCounter(counter + increment)
+      setCounter(counter + increment);
     } else {
-      setCounter(0)
+      setCounter(0);
     }
-  }
+  };
   return (
     <div className="bg-white mt-8 md:w-1/2 mx-auto overflow-hidden shadow-md rounded-lg">
       <div className="border-b border-gray-200 px-4 py-5 sm:px-6">
-        <h3 class="text-2xl leading-6 font-medium text-gray-900">
+        <h3 className="text-2xl leading-6 font-medium text-gray-900">
           Display
         </h3>
       </div>
@@ -23,11 +23,31 @@ function Display() {
         </pre>
       </div>
       <div className="text-center border-t border-gray-200 px-4 py-4 sm:px-6">
-        <Button onClickFunction={incrementCounter} increment={1} />
-        <Button onClickFunction={incrementCounter} increment={5} />
-        <Button onClickFunction={incrementCounter} increment={10} />
-        <Button onClickFunction={incrementCounter} increment={100} />
-        <Button onClickFunction={incrementCounter} increment={0} />
+        <Button
+          onClickFunction={incrementCounter}
+          btnStyle="rounded-l border border-gray-300"
+          increment={1}
+        />
+        <Button
+          onClickFunction={incrementCounter}
+          btnStyle="border border-l-0 border-r-0 border-gray-300"
+          increment={5}
+        />
+        <Button
+          onClickFunction={incrementCounter}
+          btnStyle="border border-r-0 border-gray-300"
+          increment={10}
+        />
+        <Button
+          onClickFunction={incrementCounter}
+          btnStyle="border border-r-0 border-gray-300"
+          increment={100}
+        />
+        <Button
+          onClickFunction={incrementCounter}
+          btnStyle="rounded-r border border-gray-300"
+          increment={0}
+        />
       </div>
     </div>
   );
