@@ -1,5 +1,6 @@
 {
-  "name": "frontend",
+  "homepage": "http://abidarelmehdi.github.io/react-playground",
+  "name": "react-playground",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,11 +17,13 @@
   },
   "scripts": {
     "start": "npm run watch:css && react-scripts start",
-    "build": "NODE_ENV=production npm run build:css && react-scripts build",
+    "build": "set NODE_ENV=production npm run build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:css": "postcss src/assets/css/tailwind.css -o src/assets/css/main.css",
-    "watch:css": "postcss src/assets/css/tailwind.css -o src/assets/css/main.css"
+    "watch:css": "postcss src/assets/css/tailwind.css -o src/assets/css/main.css",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
